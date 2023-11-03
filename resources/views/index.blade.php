@@ -26,7 +26,7 @@
 
         <div class="overlay" data-overlay></div>
 
-        <a href="./index.html" class="logo">
+        <a href="{{route('home.index')}}" class="logo">
             <img src="/images/logo.svg" alt="Filmlane logo">
         </a>
 
@@ -61,7 +61,7 @@
 
             <div class="navbar-top">
 
-                <a href="./index.html" class="logo">
+                <a href="{{route('home.index')}}" class="logo">
                     <img src="public/images/logo.svg" alt="Filmlane logo">
                 </a>
 
@@ -214,29 +214,20 @@
                     </div>
 
                     <ul class="filter-list">
-
-                        <li>
-                            <button class="filter-btn">Movies</button>
-                        </li>
-
-                        <li>
-                            <button class="filter-btn">TV Shows</button>
-                        </li>
-
-                        <a href="{{ route('anime.index') }}">
-                            <button class="filter-btn">Anime</button>
-                        </a>
-
+                        @foreach($categories as $category)
+                            <a href="{{route('category.show', $category->id) }}">
+                                <button class="filter-btn">{{ $category->genre }}</button>
+                            </a>
+                        @endforeach
                     </ul>
 
-                </div>
 
+                </div>
                 <ul class="movies-list  has-scrollbar">
                     @foreach($films as $film)
-
                         <li>
                             <div class="movie-card">
-                                <a href="{{ route('movie-details', ['id' => $film->id]) }}">
+                                <a href="{{ route('film.show', ['id' => $film->id]) }}">
                                     <figure class="card-banner">
                                         <img class="h-auto max-w-lg rounded-lg" src="{{$film->image}}"
                                              alt="The Northman movie poster">

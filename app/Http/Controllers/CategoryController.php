@@ -8,7 +8,7 @@ class CategoryController extends Controller
 {
     public function index(GenreService $service)
     {
-        $category = $service->index();
-        return view('index', compact('category'));
+        $categories = $service->index();
+        return view('index', compact('categories'));
     }
 }

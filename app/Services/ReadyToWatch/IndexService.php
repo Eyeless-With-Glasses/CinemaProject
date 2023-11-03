@@ -8,7 +8,6 @@ class IndexService
 {
     public function index()
     {
-        $film = Film::find(1);
-        return $film;
+
     }
 }

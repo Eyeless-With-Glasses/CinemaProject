@@ -25,7 +25,7 @@
 
         <div class="overlay" data-overlay></div>
 
-        <a href="./index.html" class="logo">
+        <a href="{{route('home.index')}}" class="logo">
             <img src="/images/logo.svg" alt="Filmlane logo">
         </a>
 
@@ -60,7 +60,7 @@
 
             <div class="navbar-top">
 
-                <a href="./index.html" class="logo">
+                <a href="{{route('home.index')}}" class="logo">
                     <img src="/images/logo.svg" alt="Filmlane logo">
                 </a>
 
@@ -208,7 +208,11 @@
                         <span>Download</span>
                         <ion-icon name="download-outline"></ion-icon>
                     </a>
+                    <img class="w-14 h-14 rounded-full" src="https://avatars.mds.yandex.net/i?id=b529c1389ec13228cc6fe5fb66d0e8dee2d3eda5-10695517-images-thumbs&n=13" alt="Rounded avatar">
+                    <img class="w-14 h-14 rounded-full" src="https://avatars.mds.yandex.net/i?id=b529c1389ec13228cc6fe5fb66d0e8dee2d3eda5-10695517-images-thumbs&n=13" alt="Rounded avatar">
+
                 </div>
+
             </div>
         </section>
 
