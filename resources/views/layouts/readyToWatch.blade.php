@@ -162,12 +162,11 @@
                             <div class="badge badge-outline">HD</div>
                         </div>
 
-                        <div class="ganre-wrapper">
-                            <a href="#">Comedy,</a>
-                            <a href="#">Action,</a>
-                            <a href="#">Adventure,</a>
-                            <a href="#">Science Fiction</a>
-                        </div>
+                        @foreach($film->categories as $category)
+                            <div class="ganre-wrapper">
+                                <a href="#">{{$category->genre}}</a>
+                            </div>
+                        @endforeach
 
                         <div class="date-time">
                             <div>

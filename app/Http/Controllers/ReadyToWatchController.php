@@ -19,19 +19,8 @@ class ReadyToWatchController extends Controller
             $query->where('films.id', $film->id);
         })->get();
 
+
         return view('layouts.readyToWatch', compact('film', 'actors'));
 
-
-
-
-
-//        $category = Category::find($id);
-//        $films = Film::whereHas('categories', function (Builder $query) use ($category)  {
-//            $query->where('categories.id', $category->id);
-//        })->get();
-//        $categories = Category::all();
-
     }
-
-
 }
